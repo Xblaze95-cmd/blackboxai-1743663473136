@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shop - Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('../public/header/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+  <main>
+    <section class="hero min-h-screen flex items-center justify-center text-white">
+      <div class="text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to My Shop</h1>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Book appointments, make payments, and place orders - all in one place</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="appointment.html" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">Book Appointment</a>
+          <a href="payment.html" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-medium transition">Make Payment</a>
+          <a href="order.html" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-medium transition">Place Order</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-blue-500 text-4xl mb-4">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Easy Appointments</h3>
+          <p>Book your slot in just a few clicks with our online scheduling system.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-green-500 text-4xl mb-4">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure Payments</h3>
+          <p>Pay online safely with multiple payment options available.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="text-purple-500 text-4xl mb-4">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Online Orders</h3>
+          <p>Browse and order products from our catalog anytime.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../public/footer/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
