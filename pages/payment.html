@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment | My Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('../public/header/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <main class="p-4 max-w-md mx-auto">
+    <h1 class="text-2xl font-bold mb-4">Payment</h1>
+    <div class="bg-white p-4 rounded shadow">
+      <div class="mb-4">
+        <label class="block mb-2">Amount</label>
+        <input type="number" class="w-full p-2 border rounded" value="50.00">
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2">Card Number</label>
+        <input type="text" class="w-full p-2 border rounded" placeholder="1234 5678 9012 3456">
+      </div>
+      <button class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+        Pay Now
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../public/footer/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
