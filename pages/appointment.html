@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment | My Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('../public/header/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <main class="min-h-screen py-12 px-4">
+    <div class="max-w-md mx-auto">
+      <h1 class="text-3xl font-bold mb-8 text-center">Book Appointment</h1>
+      
+      <form class="bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Service</label>
+          <select class="w-full p-2 border rounded">
+            <option>Haircut</option>
+            <option>Manicure</option>
+            <option>Massage</option>
+          </select>
+        </div>
+        
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Date</label>
+          <input type="date" class="w-full p-2 border rounded">
+        </div>
+        
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Time</label>
+          <select class="w-full p-2 border rounded">
+            <option>9:00 AM</option>
+            <option>10:00 AM</option>
+            <option>11:00 AM</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">
+          Book Appointment
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('../public/footer/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+</body>
+</html>
